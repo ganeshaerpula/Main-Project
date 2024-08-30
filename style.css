@@ -7,7 +7,15 @@ input, textarea {
     font-family: 'Poppins', sans-serif;
     outline: none;
 }
-
+a{
+    text-decoration: none;
+}
+.topp{
+    width: 50vw;
+}
+.menu-toggle{
+    display: none;
+}
 header {
     width: 100%;
     height: 100vh;
@@ -602,11 +610,19 @@ footer {
     .menu-item {
         display: none;
     }
-
+    .topp{
+        width: 95%;
+        padding-top: 100px;
+    }
     .primary-button {
         margin-right: 0
     }
-
+    .menu-toggle{
+        display: block;
+    }
+    #meta-menu{
+        display: block;
+    }
     #main-text-wrapper > h1 {
         font-size: 28px;
     }
