@@ -15,21 +15,25 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav>   
             <img id="logo" src="https://mobirise.com/extensions/organicamp/assets/images/logo1.jpg" alt="logo">
 
-            <div>
-                <div class="menu-toggle">
+            <div>  
+                <div class="menu-toggle" id="mn" tabindex="0">
                     <a id="metaMenu" href="#" style="color: rgb(217, 40, 9);">&#9776;</a>
                 </div>
-                <div class="dropdown-wrapper">
+                <div id="menu-items" class="dropdown-wrapper">
                     <a class="menu-item" href="#steps-section">Demo Pages</a>
-
-                 
+                    <a class="menu-item" href="#video">Watch Video</a>
+                    <a class="menu-item" href="#address-section">Contact</a>
                 </div>
-                <a class="menu-item" href="#video">Watch Video</i></a>
-                <div class="dropdown-wrapper">
-                    <a class="menu-item" href="#address-section">Contact</a></div>
+                <div id="menu-items-mobile" class="dropdown-wrapper">
+                    <a class="menu-item" href="#steps-section">Demo Pages</a>
+                    <a class="menu-item" href="#video">Watch Video</a>
+                    <a class="menu-item" href="#address-section">Contact</a>
+                </div>
+            </div>   
+                
         </nav>
         <section id="landing-section">
             <div id="main-text-wrapper">
@@ -197,5 +201,19 @@
     </main>
 
     <footer>© Copyright 2018 Mobirise - All Rights Reserved</footer>
+    <script>
+        document.getElementById("mn").addEventListener("click", function(event) {
+    event.preventDefault();  // Prevent default anchor behavior
+    var menuItems = document.getElementById("menu-items");
+    
+    // Toggle the display of the menu items
+    if (menuItems.style.display === "block") {
+        menuItems.style.display = "none";
+    } else {
+        menuItems.style.display = "block";
+    }
+});
+
+    </script>
 </body>
 </html>

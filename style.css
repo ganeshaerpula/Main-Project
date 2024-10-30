@@ -47,7 +47,22 @@ nav {
 #metaMenu:hover + .el .s1 {
     display: block;
 }
+#menu-items-mobile{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    position: absolute;
+    top:77px;
+    right: 5px;
+    
 
+}
+#menu-item{
+    display: flex;
+    flex-direction: column;
+}
 .menu-item {
     color: black;
     font-weight: 600;
@@ -607,8 +622,10 @@ footer {
 /* FOOTER SECTION STYLES END */
 
 @media (max-width: 900px) {    
-    .menu-item {
-        display: none;
+    #menu-items {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
     }
     .topp{
         width: 95%;
@@ -619,6 +636,7 @@ footer {
     }
     .menu-toggle{
         display: block;
+        margin-right: 25px;
     }
     #meta-menu{
         display: block;
@@ -728,9 +746,21 @@ footer {
     #address-wrapper > div:last-of-type {
         width: 100%;
     }
-    .menu-toggle:hover{
-       display: block;
+    .menu-toggle:focus{
+       display:block
+       
     }
+    .menu-toggle {
+        display: block;  /* Initially hide the menu items */
+       
+    }
+    .menu {
+        cursor: pointer;
+    }
+    .menu-toggle:focus ~ #menu-items-mobile{
+        display: block;
+    }
+    
         
     }
 
